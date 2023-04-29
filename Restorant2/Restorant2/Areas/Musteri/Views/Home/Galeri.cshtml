@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Restorant2.Models.Galeri>
+@{
+    ViewData["Title"] = "Galeri";
+    Layout = "~/Views/Shared/MasterPage_Layout.cshtml";
+}
+
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/Website/images/bg-title-page-02.jpg);">
+	<h2 class="tit6 t-center">
+		Galleri
+	</h2>
+</section>
+
+
+
+<!-- Gallery -->
+<div class="section-gallery p-t-118 p-b-100">
+	
+
+	<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+		<!-- - -->
+
+
+		@foreach (var item in Model)
+		{
+			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="@item.Image" alt="IMG-GALLERY" height="300">
+
+			
+			</div>
+		}
+		
+
+	
+	</div>
+
+	<div class="pagination flex-c-m flex-w p-l-15 p-r-15 m-t-24 m-b-50">
+		<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
+		<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
+		<a href="#" class="item-pagination flex-c-m trans-0-4">3</a>
+	</div>
+</div>
+
